@@ -1,0 +1,215 @@
+/* Vehicle-specific styles - Uses theme variables from new-theme.css */
+
+body {
+    background: var(--bg-secondary, #F8FAFC);
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-primary, #1F2937);
+}
+
+/* Card */
+.card {
+    border: none;
+    border-radius: var(--radius-lg, 15px);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg, 0 10px 25px rgba(0,0,0,0.1));
+    background: var(--bg-card, white);
+    border: 1px solid var(--border-primary, #E5E7EB);
+}
+
+.card-body {
+    padding: 35px;
+}
+
+/* Image */
+.vehicle-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.card img {
+    transition: var(--transition-normal, 0.3s);
+}
+
+.card img:hover {
+    transform: scale(1.03);
+}
+
+/* Heading */
+h2 {
+    font-weight: 700;
+    color: var(--text-primary, #222);
+}
+
+h5 {
+    margin-top: 25px;
+    color: var(--primary, #0d6efd);
+}
+
+/* Table */
+.table th {
+    width: 180px;
+    color: var(--text-secondary, #444);
+    background: var(--bg-tertiary, #f7fafc);
+    font-weight: 600;
+}
+
+.table td {
+    color: var(--text-secondary, #666);
+}
+
+/* Badges */
+.badge {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: var(--radius-full, 20px);
+}
+
+.bg-success {
+    background: var(--accent-green, #198754) !important;
+    color: white;
+}
+
+.bg-danger {
+    background: var(--accent-red, #dc3545) !important;
+    color: white;
+}
+
+.bg-warning {
+    background: var(--accent-yellow, #ffc107) !important;
+    color: var(--black, #222);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 25px;
+    border-radius: var(--radius-md, 8px);
+    transition: var(--transition-normal, 0.3s);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+}
+
+/* Description */
+p {
+    line-height: 1.8;
+    color: var(--text-secondary, #555);
+}
+
+/* Card Header */
+.card-header {
+    background: var(--primary, #0d6efd);
+    color: white;
+    padding: 20px 25px;
+}
+
+/* Form */
+input,
+textarea,
+select {
+    border-radius: var(--radius-md, 8px) !important;
+    border: 1px solid var(--border-primary, #E5E7EB);
+    background: var(--bg-primary, white);
+    color: var(--text-primary, #1F2937);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1) !important;
+    border: 1px solid var(--primary, #0d6efd) !important;
+    outline: none;
+}
+
+/* Edit Image */
+.preview-image {
+    width: 180px;
+    border-radius: var(--radius-md, 10px);
+    margin-top: 15px;
+    border: 2px solid var(--border-primary, #E5E7EB);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: var(--shadow-md, 0 3px 10px rgba(0,0,0,0.1));
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: var(--bg-card, white);
+    border-radius: var(--radius-lg, 12px);
+    padding: 25px;
+    box-shadow: var(--shadow-md, 0 5px 15px rgba(0,0,0,0.08));
+    border: 1px solid var(--border-primary, #E5E7EB);
+}
+
+.dashboard-card h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary, #0d6efd);
+}
+
+.dashboard-card p {
+    margin: 0;
+    color: var(--text-secondary, #666);
+}
+
+/* Vehicle Card */
+.vehicle-card {
+    transition: var(--transition-normal, 0.3s);
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg, 0 10px 20px rgba(0,0,0,0.15));
+}
+
+/* Animation */
+.fade-in {
+    animation: fade 0.8s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Action Buttons */
+.action-btn {
+    margin-right: 10px;
+}
+
+/* Price */
+.price {
+    color: var(--accent-green, #198754);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--text-tertiary, #777);
+    padding: 20px;
+    border-top: 1px solid var(--border-primary, #E5E7EB);
+}

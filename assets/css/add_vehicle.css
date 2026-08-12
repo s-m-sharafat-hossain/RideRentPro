@@ -1,0 +1,225 @@
+/* ===========================================
+   RideRent Pro - Advanced Admin Dashboard CSS
+   Uses theme variables from new-theme.css
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+    background: var(--bg-secondary, #F8FAFC);
+    min-height: 100vh;
+    padding: 40px;
+    color: var(--text-primary, #1F2937);
+}
+
+/* Card */
+.card {
+    max-width: 1200px;
+    margin: auto;
+    border: none !important;
+    border-radius: var(--radius-xl, 20px);
+    overflow: hidden;
+    background: var(--bg-card, white);
+    box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,0.08));
+    transition: var(--transition-normal, 0.4s);
+    border: 1px solid var(--border-primary, #E5E7EB);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl, 0 20px 50px rgba(0,0,0,0.12));
+}
+
+/* Header */
+.card-header {
+    background: linear-gradient(135deg, var(--primary-dark, #0f4cdd), var(--primary, #2563eb), var(--primary-light, #4f8cff)) !important;
+    padding: 25px;
+    border: none;
+}
+
+.card-header h2 {
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+}
+
+.card-body {
+    padding: 35px;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: var(--text-primary, #34495e);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+    height: 50px;
+    border-radius: var(--radius-lg, 12px);
+    border: 2px solid var(--border-primary, #dfe7f3);
+    background: var(--bg-tertiary, #fbfcfe);
+    transition: var(--transition-normal, 0.3s);
+    font-size: 15px;
+    color: var(--text-primary, #1F2937);
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: var(--primary-light, #4f8cff);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary, #2563eb);
+    background: var(--bg-card, white);
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.2);
+    transform: scale(1.01);
+    outline: none;
+}
+
+/* Textarea */
+textarea.form-control {
+    height: 150px;
+    resize: none;
+}
+
+/* File Upload */
+input[type=file] {
+    border: 2px dashed var(--primary-light, #4f8cff);
+    border-radius: var(--radius-lg, 12px);
+    background: var(--bg-tertiary, #f8fbff);
+    padding: 10px;
+    transition: var(--transition-normal, 0.3s);
+}
+
+input[type=file]:hover {
+    background: var(--bg-secondary, #eef5ff);
+}
+
+/* Buttons */
+.btn {
+    border-radius: var(--radius-lg, 12px);
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: var(--transition-normal, 0.3s);
+    font-size: 16px;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--accent-green, #00b894), #00d084);
+    border: none;
+    color: white;
+}
+
+.btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 208, 132, 0.35);
+}
+
+.btn-secondary {
+    background: var(--medium-gray, #64748b);
+    border: none;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: var(--dark-gray, #475569);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md, 0 10px 20px rgba(0,0,0,0.18));
+}
+
+/* Description Box */
+textarea {
+    padding: 15px;
+}
+
+/* Alert */
+.alert-success {
+    border: none;
+    border-radius: var(--radius-lg, 12px);
+    background: #dcfce7;
+    color: #166534;
+    font-weight: 600;
+    padding: 15px;
+}
+
+/* Placeholder */
+::placeholder {
+    color: var(--text-tertiary, #94a3b8);
+}
+
+/* Row spacing */
+.row {
+    margin-bottom: 12px;
+}
+
+/* Nice animation */
+.card {
+    animation: fade 0.8s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary, #2563eb);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-tertiary, #edf2fb);
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+    body {
+        padding: 20px;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .card-header h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header h2 {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
